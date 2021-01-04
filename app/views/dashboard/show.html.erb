@@ -3,9 +3,17 @@
 <div>
   <div class='column' id='public-repos'>
     <h3>Public repos:</h3>
+
+    <% @public_repos.each do |repo| %>
+      <h4><%= link_to repo.name, repo.url %></h4>
+    <% end %>
   </div>
 
   <div class='column' id='private-repos'>
     <h3>Private repos:</h3>
+
+    <% @private_repos.each do |repo| %>
+      <h4><%= link_to repo.name, repo.url %></h4>
+    <% end %>
   </div>
 </div>
